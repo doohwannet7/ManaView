@@ -40,6 +40,7 @@ namespace Manaview
         public ManaviewHost()
         {
             InitializeHost();
+            //주석 테스트
         }
 
         private void InitializeHost()

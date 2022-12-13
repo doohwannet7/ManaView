@@ -207,3 +207,4 @@ EDS.Business/Properties/AssemblyInfo.cs
 EDS.Utility/Properties/AssemblyInfo.cs
 
 .vs/
+.vs/slnx.sqlite
