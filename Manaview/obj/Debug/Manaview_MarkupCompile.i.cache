@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\3.Github\ManaView\Manaview\App.xaml
-2-677066388
+3-1057737036
 
-111668835702
+13-1602685751
 13-1142990016
-MainWindow.xaml;UI\MainFrame\TitleBarView.xaml;
+MainWindow.xaml;Themes\GrayTheme\ThemeColor.xaml;UI\MainFrame\TitleBarView.xaml;
 
-True
+False
 

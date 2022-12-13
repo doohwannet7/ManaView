@@ -4,6 +4,12 @@
              xmlns:local="clr-namespace:Manaview"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary x:Name="ThemeDictionary" Source="/Themes/GrayTheme/ThemeColor.xaml"/>
+            </ResourceDictionary.MergedDictionaries> 
+        </ResourceDictionary> 
+        
+        
     </Application.Resources>
 </Application>

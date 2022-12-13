@@ -15,3 +15,6 @@ D:\3.Github\ManaView\Manaview\obj\Debug\Manaview.csproj.GenerateResource.cache
 D:\3.Github\ManaView\Manaview\obj\Debug\Manaview.csproj.CoreCompileInputs.cache
 D:\3.Github\ManaView\Manaview\obj\Debug\Manaview.exe
 D:\3.Github\ManaView\Manaview\obj\Debug\Manaview.pdb
+D:\3.Github\ManaView\Manaview\obj\Debug\Themes\GrayTheme\ThemeColor.baml
+D:\3.Github\ManaView\Manaview\obj\Debug\App.baml
+D:\3.Github\ManaView\Manaview\obj\Debug\Manaview.csproj.AssemblyReference.cache
