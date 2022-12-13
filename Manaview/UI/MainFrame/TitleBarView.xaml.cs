@@ -22,6 +22,58 @@ namespace Manaview
         public TitleBarView()
         {
             InitializeComponent();
+            btnMax.Click += BtnMax_Click;
+            btnRestore.Click += BtnRestore_Click;
+            btnMin.Click += BtnMin_Click;
+            btnClose.Click += BtnClose_Click;
+            Application.Current.MainWindow.StateChanged += MainWindow_StateChanged;
+
+        }
+
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void BtnRestore_Click(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow.WindowState == WindowState.Maximized)
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Normal;
+            }
+        }
+
+        private void MainWindow_StateChanged(object sender, EventArgs e)
+        {
+            if(Application.Current.MainWindow.WindowState != WindowState.Maximized)
+            {
+                btnMax.Visibility = Visibility.Visible;
+                btnRestore.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                btnMax.Visibility = Visibility.Collapsed;
+                btnRestore.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void BtnMin_Click(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow.WindowState != WindowState.Minimized)
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Minimized;
+            }
+        }
+
+        private void BtnMax_Click(object sender, RoutedEventArgs e)
+        {
+            if(Application.Current.MainWindow.WindowState != WindowState.Maximized)
+            {
+                System.Windows.Forms.Screen screen = System.Windows.Forms.Screen.FromHandle(new System.Windows.Interop.WindowInteropHelper(Application.Current.MainWindow).Handle);
+                Application.Current.MainWindow.MaxHeight = screen.WorkingArea.Height;
+                Application.Current.MainWindow.MaxWidth = screen.WorkingArea.Width;
+                Application.Current.MainWindow.WindowState = WindowState.Maximized;
+            }
         }
     }
 }

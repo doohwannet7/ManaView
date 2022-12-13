@@ -12,12 +12,24 @@
     <UserControl.Resources>
         <Converter:DebugDummyConverter x:Key="DebugDummyConverter" />
     </UserControl.Resources>
-    
-    
+
+
     <Grid Background="{StaticResource titleBarBG}">
         <TextBlock Margin="8,6,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" FontSize="12"
                    FontStretch="UltraExpanded" FontWeight="UltraBold"
                    Text="{Binding Path=VersionInfo.Etc.ProgramTitle, Source={x:Static Manaview:ManaviewHost.Inst}}"
                    />
+        <Button x:Name="btnMin" Width="29" Height="16" VerticalAlignment="top" HorizontalAlignment="Right"
+                Content="-" Margin="0,5,85,0"/>
+
+        <Button x:Name="btnRestore" Visibility="Collapsed" Width="29" Height="16" VerticalAlignment="top" HorizontalAlignment="Right"
+                Content="ㅁ" Margin="0,5,45,0"/>
+
+        <Button x:Name="btnMax" Width="29" Height="16" VerticalAlignment="top" HorizontalAlignment="Right"
+                Content="ㅁ" Margin="0,5,45,0"/>
+
+        <Button x:Name="btnClose" Width="29" Height="16" VerticalAlignment="top" HorizontalAlignment="Right"
+                Content="X" Margin="0,5,5,0"/>
+
     </Grid>
 </UserControl>
