@@ -4,14 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:Manaview="clr-namespace:Manaview"
-        mc:Ignorable="d"
+        xmlns:Converter="clr-namespace:Manaview.UI.Converter"
+        xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"
+        mc:Ignorable="d" Name="testName"
         d:DesignHeight="30" d:DesignWidth="1000">
+
+    <UserControl.Resources>
+        <Converter:DebugDummyConverter x:Key="DebugDummyConverter" />
+    </UserControl.Resources>
+    
+    
     <Grid Background="{StaticResource titleBarBG}">
         <TextBlock Margin="8,6,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" FontSize="12"
                    FontStretch="UltraExpanded" FontWeight="UltraBold"
                    Text="{Binding Path=VersionInfo.Etc.ProgramTitle, Source={x:Static Manaview:ManaviewHost.Inst}}"
                    />
-
-
     </Grid>
 </UserControl>

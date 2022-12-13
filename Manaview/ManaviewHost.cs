@@ -35,8 +35,17 @@ namespace Manaview
             }
         }
 
-        public VersionData VesrionInfo { get; set; }
+        public VersionData VersionInfo { get; set; }
 
+        public ManaviewHost()
+        {
+            InitializeHost();
+        }
+
+        private void InitializeHost()
+        {
+            VersionInfo = new VersionData();
+        }
 
         public void Dispose()
         {

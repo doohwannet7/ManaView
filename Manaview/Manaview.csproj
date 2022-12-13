@@ -57,6 +57,7 @@
     <Compile Include="Common\VersionData.cs" />
     <Compile Include="ManaviewHost.cs" />
     <Compile Include="UI\Converter\BoolToVisibilityConverter.cs" />
+    <Compile Include="UI\Converter\DebugDummyConverter.cs" />
     <Compile Include="UI\MainFrame\TitleBarView.xaml.cs">
       <DependentUpon>TitleBarView.xaml</DependentUpon>
     </Compile>
