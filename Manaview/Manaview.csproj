@@ -63,8 +63,15 @@
     <Compile Include="MainWindowVM_Commands.cs" />
     <Compile Include="MainWindowVM.cs" />
     <Compile Include="ManaviewHost.cs" />
+    <Compile Include="UI\ContentsViews\ContentsView.xaml.cs">
+      <DependentUpon>ContentsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ContentsViews\ContentsVM.cs" />
     <Compile Include="UI\Converter\BoolToVisibilityConverter.cs" />
     <Compile Include="UI\Converter\DebugDummyConverter.cs" />
+    <Compile Include="UI\MainFrame\MenuBar.xaml.cs">
+      <DependentUpon>MenuBar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\MainFrame\TitleBarView.xaml.cs">
       <DependentUpon>TitleBarView.xaml</DependentUpon>
     </Compile>
@@ -81,6 +88,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Themes\GrayTheme\ThemeColor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ContentsViews\ContentsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MainFrame\MenuBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,5 +136,6 @@
       <Name>MVVM</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

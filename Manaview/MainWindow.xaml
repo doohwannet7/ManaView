@@ -56,7 +56,7 @@
                 
                 <!-- Main Contents -->
                 <Grid Grid.Row="1">
-
+                    <UserControl Content="{Binding ContentsView}"/>
                 </Grid>
                 <!-- Status Bar -->
                 <Grid Grid.Row="2">

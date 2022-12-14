@@ -36,5 +36,25 @@ namespace Manaview
             }
         }
 
+
+        public ICommand OpenCommand
+        {
+            get
+            {
+                if (_openCommand == null)
+                {
+                    _openCommand = new RelayCommand(execute => OpenCommand_Execute(), canExecute => true);
+                }
+                return _openCommand;
+            }
+        }
+
+        RelayCommand _openCommand;
+
+        void OpenCommand_Execute()
+        {
+            string fileName = Common.OpenFileDialog("이미지|*.png|*.jpg|*.jpeg|*.tif");
+
+        }
     }
 }

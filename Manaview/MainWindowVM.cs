@@ -1,4 +1,5 @@
-﻿using ManaView.MVVM;
+﻿using Manaview.UI;
+using ManaView.MVVM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Manaview
     {
         public MainWindowVM()
         {
+            //ContentsView = new 
         }
 
         /// <summary>
@@ -31,5 +33,28 @@ namespace Manaview
         }
 
         private UserControl _contentsView = null;
+
+        /// <summary>
+        /// Contents View VM
+        /// </summary>
+        public ContentsVM ContentsVM
+        {
+            get
+            {
+                if(_contentsVM == null)
+                {
+                    _contentsVM = new ContentsVM(this);
+                }
+
+                return _contentsVM;
+            }
+            set
+            {
+                _contentsVM = value;
+                OnPropertyChanged("ContentsVM");
+
+            }
+        }
+        private ContentsVM _contentsVM = null;
     }
 }
