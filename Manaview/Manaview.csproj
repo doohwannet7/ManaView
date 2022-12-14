@@ -58,7 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Common\Common.cs" />
     <Compile Include="Common\VersionData.cs" />
+    <Compile Include="MainWindowVM_Commands.cs" />
     <Compile Include="MainWindowVM.cs" />
     <Compile Include="ManaviewHost.cs" />
     <Compile Include="UI\Converter\BoolToVisibilityConverter.cs" />

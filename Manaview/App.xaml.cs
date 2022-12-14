@@ -13,5 +13,25 @@ namespace Manaview
     /// </summary>
     public partial class App : Application
     {
+        MainWindowVM _mainWindowVM = null;
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            StartManaview();
+            base.OnStartup(e);
+        }
+
+        private void StartManaview()
+        {
+            if(_mainWindowVM == null)
+            {
+                _mainWindowVM = new MainWindowVM();
+            }
+
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.DataContext = _mainWindowVM;
+
+            mainWindow.Show();
+        }
     }
 }
