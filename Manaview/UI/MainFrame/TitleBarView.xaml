@@ -6,7 +6,9 @@
         xmlns:Manaview="clr-namespace:Manaview"
         xmlns:Converter="clr-namespace:Manaview.UI.Converter"
         xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"
-        mc:Ignorable="d" Name="testName"
+        mc:Ignorable="d"
+        MouseLeftButtonDown="UserControl_MouseLeftButtonDown"
+        MouseDoubleClick="UserControl_MouseDoubleClick"
         d:DesignHeight="30" d:DesignWidth="1000">
 
     <UserControl.Resources>

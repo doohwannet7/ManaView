@@ -32,7 +32,8 @@ namespace Manaview
 
         private void BtnClose_Click(object sender, RoutedEventArgs e)
         {
-            Environment.Exit(0);
+            //Environment.Exit(0);
+            Application.Current.Shutdown();
         }
 
         private void BtnRestore_Click(object sender, RoutedEventArgs e)
@@ -73,6 +74,26 @@ namespace Manaview
                 Application.Current.MainWindow.MaxHeight = screen.WorkingArea.Height;
                 Application.Current.MainWindow.MaxWidth = screen.WorkingArea.Width;
                 Application.Current.MainWindow.WindowState = WindowState.Maximized;
+            }
+        }
+
+        private void UserControl_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Application.Current.MainWindow.DragMove();
+        }
+
+        private void UserControl_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if(Application.Current.MainWindow.WindowState != WindowState.Maximized)
+            {
+                System.Windows.Forms.Screen screen = System.Windows.Forms.Screen.FromHandle(new System.Windows.Interop.WindowInteropHelper(Application.Current.MainWindow).Handle);
+                Application.Current.MainWindow.MaxHeight = screen.WorkingArea.Height;
+                Application.Current.MainWindow.MaxWidth = screen.WorkingArea.Width;
+                Application.Current.MainWindow.WindowState = WindowState.Maximized;
+            }
+            else
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Normal;
             }
         }
     }
