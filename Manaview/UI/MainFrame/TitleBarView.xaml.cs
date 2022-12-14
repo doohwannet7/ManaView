@@ -25,7 +25,7 @@ namespace Manaview
             btnMax.Click += BtnMax_Click;
             btnRestore.Click += BtnRestore_Click;
             btnMin.Click += BtnMin_Click;
-            btnClose.Click += BtnClose_Click;
+            //btnClose.Click += BtnClose_Click;
             Application.Current.MainWindow.StateChanged += MainWindow_StateChanged;
 
         }

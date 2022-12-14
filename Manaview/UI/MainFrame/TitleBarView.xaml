@@ -31,7 +31,9 @@
                 Content="ㅁ" Margin="0,5,45,0"/>
 
         <Button x:Name="btnClose" Width="29" Height="16" VerticalAlignment="top" HorizontalAlignment="Right"
-                Content="X" Margin="0,5,5,0"/>
+                Content="X" Margin="0,5,5,0"
+                Command="{Binding CloseCommand}"
+                />
 
     </Grid>
 </UserControl>
