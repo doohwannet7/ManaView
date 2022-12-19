@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manaview", "Manaview.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM", "..\MVVM\MVVM.csproj", "{5BC5DD52-460C-43EE-BCA4-40D2D49B7B2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManaViewControls", "..\ManaViewControls\ManaViewControls.csproj", "{E39D5103-EEF4-4B3C-B838-D0494812E3F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5BC5DD52-460C-43EE-BCA4-40D2D49B7B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BC5DD52-460C-43EE-BCA4-40D2D49B7B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BC5DD52-460C-43EE-BCA4-40D2D49B7B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E39D5103-EEF4-4B3C-B838-D0494812E3F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E39D5103-EEF4-4B3C-B838-D0494812E3F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E39D5103-EEF4-4B3C-B838-D0494812E3F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E39D5103-EEF4-4B3C-B838-D0494812E3F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

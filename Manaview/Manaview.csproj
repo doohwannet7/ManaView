@@ -60,6 +60,9 @@
     </ApplicationDefinition>
     <Compile Include="Common\Common.cs" />
     <Compile Include="Common\VersionData.cs" />
+    <Compile Include="UI\Controls\ImageItemPanel.xaml.cs">
+      <DependentUpon>ImageItemPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindowVM_Commands.cs" />
     <Compile Include="MainWindowVM.cs" />
     <Compile Include="ManaviewHost.cs" />
@@ -67,14 +70,23 @@
       <DependentUpon>ContentsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\ContentsViews\ContentsVM.cs" />
+    <Compile Include="UI\ContentsViews\ImageItem\ImageItemView.xaml.cs">
+      <DependentUpon>ImageItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ContentsViews\ImageItem\ImageItemVM.cs" />
+    <Compile Include="UI\Controls\ImageItemPanelVM.cs" />
     <Compile Include="UI\Converter\BoolToVisibilityConverter.cs" />
     <Compile Include="UI\Converter\DebugDummyConverter.cs" />
-    <Compile Include="UI\MainFrame\MenuBar.xaml.cs">
-      <DependentUpon>MenuBar.xaml</DependentUpon>
+    <Compile Include="UI\MainFrame\MenuBarView.xaml.cs">
+      <DependentUpon>MenuBarView.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\MainFrame\TitleBarView.xaml.cs">
       <DependentUpon>TitleBarView.xaml</DependentUpon>
     </Compile>
+    <Page Include="UI\Controls\ImageItemPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -95,7 +107,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UI\MainFrame\MenuBar.xaml">
+    <Page Include="UI\ContentsViews\ImageItem\ImageItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MainFrame\MenuBarView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,6 +147,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ManaViewControls\ManaViewControls.csproj">
+      <Project>{e39d5103-eef4-4b3c-b838-d0494812e3f9}</Project>
+      <Name>ManaViewControls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MVVM\MVVM.csproj">
       <Project>{5bc5dd52-460c-43ee-bca4-40d2d49b7b2c}</Project>
       <Name>MVVM</Name>

@@ -1,9 +1,11 @@
 ﻿using ManaView.MVVM;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Manaview.UI
 {
@@ -26,6 +28,19 @@ namespace Manaview.UI
         public ContentsVM(MainWindowVM ownerVM)
         {
             MainVM = ownerVM;
+        }
+
+        public bool OpenImage(string path)
+        {
+            if(!File.Exists(path))
+            {
+                MessageBox.Show("파일을 찾을 수 없습니다.");
+                return false;
+            }
+
+
+
+            return true;
         }
     }
 }

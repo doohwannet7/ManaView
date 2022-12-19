@@ -32,6 +32,7 @@ namespace Manaview
 
         //public static MessageBoxResult ShowMessageBox(string msg, string title = "", MessageBoxButton button = MessageBoxButton.OK)
         //{
+        //    bool beforeLoadingWindowIsShow = false;
         //    if (string.IsNullOrEmpty(title))
         //    {
         //        title = "ManaView 1.0";
