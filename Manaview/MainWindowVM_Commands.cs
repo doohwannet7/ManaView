@@ -53,8 +53,9 @@ namespace Manaview
 
         void OpenCommand_Execute()
         {
-            string fileName = Common.OpenFileDialog("이미지|*.png|*.jpg|*.jpeg|*.tif");
+            string fileName = Common.OpenFileDialog("이미지|*.png;*.jpg;*.jpeg;*.tif");
 
+            ContentsVM.OpenImage(fileName);
         }
     }
 }
