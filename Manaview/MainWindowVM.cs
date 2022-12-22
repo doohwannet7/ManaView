@@ -13,7 +13,8 @@ namespace Manaview
     {
         public MainWindowVM()
         {
-            //ContentsView = new 
+            ContentsView = new Manaview.UI.ContentsView();
+            ContentsView.DataContext = ContentsVM;
         }
 
         /// <summary>

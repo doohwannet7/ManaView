@@ -1,4 +1,5 @@
 ﻿using ManaView.MVVM;
+using ManaView.UI.Controls;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,6 +25,24 @@ namespace Manaview.UI
             }
         }
         private MainWindowVM _mainVM = null;
+
+        public ImageViewer ImageViewer
+        {
+            get
+            {
+                if (_imageViewer == null)
+                {
+                    _imageViewer = new ImageViewer();
+                }
+                return _imageViewer;
+            }
+            set
+            {
+                _imageViewer = value;
+                OnPropertyChanged("ImageViewer");
+            }
+        }
+        private ImageViewer _imageViewer = null;
 
         public ContentsVM(MainWindowVM ownerVM)
         {

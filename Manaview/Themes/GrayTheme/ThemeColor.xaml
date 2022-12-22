@@ -3,6 +3,7 @@
                     >
 
     <SolidColorBrush x:Key="titleBarBG" Color="#eeeeee"/>
+    <SolidColorBrush x:Key="mainContentsBG" Color="#777777"/>
 
-    
+
 </ResourceDictionary>
